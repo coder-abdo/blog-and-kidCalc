@@ -1,0 +1,163 @@
+/* theme3.css - Jungle Safari Theme */
+
+.theme-jungle {
+  --primary-color: #2e7d32;
+  --secondary-color: #8bc34a;
+  --accent-color: #ff9800;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --text-color: #1b5e20;
+  --bg-color: #f1f8e9;
+  --card-bg: #ffffff;
+  --button-bg: #4caf50;
+  --button-hover: #388e3c;
+  --border-color: #aed581;
+}
+
+.theme-jungle {
+  background-image: url("../../images/kidcalc/jungle-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.theme-jungle .info-bar {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-bottom: 3px solid #8d6e63;
+}
+
+.theme-jungle .login-container,
+.theme-jungle .calculator-container {
+  background-image: url("../../images/kidcalc/leaf-pattern.png");
+  background-size: 200px;
+  background-color: rgba(241, 248, 233, 0.95);
+  border: 3px solid var(--primary-color);
+  box-shadow: 5px 5px 0 #8d6e63;
+}
+
+.theme-jungle .theme-btn.active[data-theme="jungle"] {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-color: #8d6e63;
+  box-shadow: 3px 3px 0 #8d6e63;
+}
+
+.theme-jungle .problem-display {
+  background-image: url("../../images/kidcalc/animal-prints.png");
+  background-size: 100px;
+  background-color: #e8f5e9;
+  border: 3px dashed var(--primary-color);
+  box-shadow: 3px 3px 0 #8d6e63;
+}
+
+.theme-jungle .adventure-item#jungle-adventure {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: 2px solid #8d6e63;
+  box-shadow: 3px 3px 0 #8d6e63;
+  color: white;
+}
+
+.theme-jungle .adventure-item#jungle-adventure .adventure-icon {
+  background-color: #8bc34a;
+  color: white;
+  box-shadow: 2px 2px 0 #689f38;
+}
+
+.theme-jungle .calculator-display {
+  background: linear-gradient(135deg, #1b5e20, var(--primary-color));
+  border: 2px solid #8d6e63;
+  box-shadow: 3px 3px 0 #5d4037;
+}
+
+.theme-jungle .calc-btn.number {
+  background-color: #c8e6c9;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0 #aed581;
+}
+
+.theme-jungle .calc-btn.operation {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: 2px solid #8d6e63;
+  box-shadow: 2px 2px 0 #689f38;
+}
+
+.theme-jungle .calc-btn.equals {
+  background: linear-gradient(135deg, #388e3c, var(--success-color));
+  box-shadow: 2px 2px 0 #2e7d32;
+}
+
+.theme-jungle .calc-btn.special {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  border: 2px solid #ff9800;
+  box-shadow: 2px 2px 0 #f57c00;
+}
+
+.theme-jungle .learning-tips {
+  background-image: url("../../images/kidcalc/monkey-icon.png");
+  background-size: 60px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: rgba(200, 230, 201, 0.5);
+  border: 2px solid var(--border-color);
+  box-shadow: 3px 3px 0 #aed581;
+}
+
+.theme-jungle .tip {
+  background-color: #e8f5e9;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.theme-jungle .score-item {
+  background-color: #e8f5e9;
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0 #c8e6c9;
+}
+
+.theme-jungle .score-item:nth-child(1) {
+  border-left: 4px solid var(--success-color);
+}
+
+.theme-jungle .score-item:nth-child(2) {
+  border-left: 4px solid var(--error-color);
+}
+
+.theme-jungle .score-item:nth-child(3) {
+  border-left: 4px solid var(--accent-color);
+}
+
+.theme-jungle .feature {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0 #aed581;
+}
+
+.theme-jungle .feature i {
+  color: var(--primary-color);
+}
+
+.theme-jungle .login-btn,
+.theme-jungle .clear-btn {
+  box-shadow: 3px 3px 0 #8d6e63;
+}
+
+.theme-jungle .login-btn:hover,
+.theme-jungle .clear-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #8d6e63;
+}

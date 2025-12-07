@@ -1,0 +1,133 @@
+/* theme2.css - Space Explorer Theme */
+
+.theme-space {
+  --primary-color: #311b92;
+  --secondary-color: #6200ea;
+  --accent-color: #ff4081;
+  --success-color: #00e676;
+  --error-color: #ff5252;
+  --text-color: #e1bee7;
+  --bg-color: #0d1117;
+  --card-bg: #1a1f29;
+  --button-bg: #7c4dff;
+  --button-hover: #651fff;
+  --border-color: #4527a0;
+}
+
+.theme-space {
+  background-image: url("../../images/kidcalc/space-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+.theme-space .info-bar {
+  background: linear-gradient(135deg, var(--primary-color), #000000);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.theme-space .login-container,
+.theme-space .calculator-container {
+  background-image: url("../../images/kidcalc/stars-pattern.png");
+  background-color: rgba(26, 31, 41, 0.95);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(255, 64, 129, 0.3);
+}
+
+.theme-space .theme-btn.active[data-theme="space"] {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.theme-space .problem-display {
+  background-image: url("../../images/kidcalc/planet-pattern.png");
+  background-size: 150px;
+  background-color: rgba(49, 27, 146, 0.2);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.2);
+}
+
+.theme-space .problem-numbers {
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+.theme-space .problem-result input {
+  background-color: rgba(26, 31, 41, 0.8);
+  border-color: var(--accent-color);
+  color: var(--text-color);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+
+.theme-space .adventure-item#space-adventure {
+  background: linear-gradient(135deg, var(--primary-color), #000000);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+
+.theme-space .adventure-item#space-adventure .adventure-icon {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.theme-space .calculator-display {
+  background: linear-gradient(135deg, #000000, var(--primary-color));
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+
+.theme-space .calc-btn.number {
+  background-color: #4527a0;
+  color: var(--text-color);
+  border: 1px solid #5e35b1;
+}
+
+.theme-space .calc-btn.operation {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: white;
+  border: 1px solid var(--accent-color);
+}
+
+.theme-space .calc-btn.equals {
+  background: linear-gradient(135deg, #00c853, var(--success-color));
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.3);
+}
+
+.theme-space .learning-tips {
+  background-image: url("../../images/kidcalc/rocket-icon.png");
+  background-size: 80px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: rgba(49, 27, 146, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+.theme-space .tip i {
+  color: var(--accent-color);
+}
+
+.theme-space .score-item {
+  background-color: rgba(69, 39, 160, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+.theme-space .feature {
+  background: linear-gradient(135deg, #311b92, #4527a0);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.2);
+}
+
+.theme-space .welcome-message i,
+.theme-space .user-info i {
+  color: var(--accent-color);
+}

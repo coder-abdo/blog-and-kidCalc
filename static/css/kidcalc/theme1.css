@@ -1,0 +1,106 @@
+/* theme1.css - Ocean Adventure Theme */
+
+.theme-ocean {
+  --primary-color: #1e88e5;
+  --secondary-color: #00acc1;
+  --accent-color: #ff9800;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --text-color: #01579b;
+  --bg-color: #e3f2fd;
+  --card-bg: #ffffff;
+  --button-bg: #2196f3;
+  --button-hover: #1976d2;
+  --border-color: #bbdefb;
+}
+
+.theme-ocean .info-bar {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.theme-ocean .login-container,
+.theme-ocean .calculator-container {
+  background-image: url("../../images/kidcalc/ocean-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: var(--primary-color);
+}
+
+.theme-ocean .theme-btn.active[data-theme="ocean"] {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-color: var(--primary-color);
+}
+
+.theme-ocean .problem-display {
+  border: 3px dashed var(--primary-color);
+  background-image: url("../../images/kidcalc/wave-pattern.png");
+  background-size: 100px;
+  background-color: white;
+}
+
+.theme-ocean .adventure-item#ocean-adventure {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+}
+
+.theme-ocean .adventure-item#ocean-adventure .adventure-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.theme-ocean .calculator-display {
+  background: linear-gradient(135deg, #0d47a1, #1565c0);
+}
+
+.theme-ocean .calc-btn.number {
+  background-color: #bbdefb;
+  color: var(--text-color);
+}
+
+.theme-ocean .calc-btn.operation {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+}
+
+.theme-ocean .learning-tips {
+  background-image: url("../../images/kidcalc/sea-shells.png");
+  background-size: 50px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: rgba(179, 229, 252, 0.3);
+}
+
+.theme-ocean .score-item:nth-child(1) {
+  background: linear-gradient(135deg, #a5d6a7, #81c784);
+}
+
+.theme-ocean .score-item:nth-child(2) {
+  background: linear-gradient(135deg, #ef9a9a, #e57373);
+}
+
+.theme-ocean .score-item:nth-child(3) {
+  background: linear-gradient(135deg, #fff59d, #ffd54f);
+}
+
+.theme-ocean .feature {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  border: 2px solid var(--border-color);
+}

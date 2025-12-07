@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Trends in 2024 | CodeCanvas Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/blog/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <i class="fas fa-pen-fancy"></i>
+          <span>CodeCanvas</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Articles</a></li>
+          <li><a href="#" class="nav-link">Tutorials</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+          <li>
+            <a href="../kidcalc/index.html" class="nav-link kidcalc-link"
+              >kidCalc</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="post-container">
+      <!-- Blog Post Header -->
+      <header class="post-header">
+        <div class="post-header-content">
+          <div class="post-category-badge">Trends</div>
+          <h1 class="post-title-main">Web Development Trends in 2024</h1>
+          <div class="post-meta-main">
+            <div class="author-info">
+              <img
+                src="../static/images/blog/author-alex.jpg"
+                alt="Alex Johnson"
+                class="author-avatar"
+              />
+              <div>
+                <p class="author-name">Alex Johnson</p>
+                <p class="author-title">
+                  Senior Frontend Developer at TechCorp
+                </p>
+              </div>
+            </div>
+            <div class="post-stats">
+              <span class="post-date-main"
+                ><i class="far fa-calendar"></i> March 15, 2024</span
+              >
+              <span class="read-time-main"
+                ><i class="far fa-clock"></i> 8 min read</span
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="post-featured-image">
+        <img
+          src="../static/images/blog/web-dev-trends.jpg"
+          alt="Web development trends illustration"
+        />
+      </div>
+
+      <!-- Post Content -->
+      <article class="post-content-main">
+        <!-- Author Bio Section -->
+        <section class="author-bio">
+          <h2>About the Author</h2>
+          <div class="author-bio-content">
+            <img
+              src="../static/images/blog/author-alex.jpg"
+              alt="Alex Johnson"
+              class="author-bio-avatar"
+            />
+            <div>
+              <h3>Alex Johnson</h3>
+              <p class="author-title-bio">
+                Senior Frontend Developer at TechCorp | JavaScript Specialist
+              </p>
+              <p>
+                With over 8 years of experience in web development, Alex
+                specializes in modern JavaScript frameworks and performance
+                optimization. He's passionate about creating accessible,
+                user-friendly web applications and frequently speaks at tech
+                conferences about emerging web technologies.
+              </p>
+              <p>
+                Alex holds a Master's degree in Computer Science from Stanford
+                University and has contributed to several open-source projects.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="article-content">
+          <p class="post-intro">
+            The web development landscape is evolving at an unprecedented pace.
+            As we step into 2024, several trends are reshaping how we build,
+            deploy, and maintain web applications. In this article, we'll
+            explore the most significant trends that every developer should be
+            aware of.
+          </p>
+
+          <h2>The Rise of AI-Powered Development</h2>
+          <p>
+            Artificial Intelligence is no longer just a buzzword—it's becoming
+            an integral part of the development workflow. Tools like GitHub
+            Copilot and Amazon CodeWhisperer are changing how developers write
+            code, offering intelligent suggestions and automating repetitive
+            tasks.
+          </p>
+
+          <div class="post-highlight">
+            <i class="fas fa-lightbulb"></i>
+            <p>
+              <strong>Key Insight:</strong> AI-assisted development can increase
+              productivity by up to 55% according to recent studies.
+            </p>
+          </div>
+
+          <h2>Advanced CSS: Container Queries and Cascade Layers</h2>
+          <p>
+            CSS continues to evolve with powerful new features. Container
+            queries allow elements to respond to the size of their container
+            rather than just the viewport, enabling more modular and reusable
+            components.
+          </p>
+
+          <pre><code class="css">.card {
+  container-type: inline-size;
+}
+
+@container (min-width: 400px) {
+  .card-content {
+    display: flex;
+    gap: 1rem;
+  }
+}</code></pre>
+
+          <p>
+            Cascade layers provide better control over specificity, allowing
+            developers to manage stylesheets more effectively in large projects.
+          </p>
+
+          <h2>Performance Optimization Takes Center Stage</h2>
+          <p>
+            With Core Web Vitals now being ranking factors for Google,
+            performance optimization is more important than ever. Techniques
+            like:
+          </p>
+          <ul>
+            <li>Lazy loading with native browser support</li>
+            <li>Image optimization with WebP and AVIF formats</li>
+            <li>JavaScript bundle splitting and tree shaking</li>
+            <li>Edge computing with CDN integration</li>
+          </ul>
+
+          <h2>The Growth of Micro Frontends</h2>
+          <p>
+            Micro frontends are gaining traction as organizations seek to scale
+            their frontend applications. This architecture allows different
+            teams to work on separate parts of a web application independently,
+            using different frameworks if needed.
+          </p>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Architecture</th>
+                  <th>Pros</th>
+                  <th>Cons</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monolithic Frontend</td>
+                  <td>Simplicity, single codebase</td>
+                  <td>Scalability issues, team dependencies</td>
+                </tr>
+                <tr>
+                  <td>Micro Frontends</td>
+                  <td>Team autonomy, independent deployment</td>
+                  <td>Initial complexity, consistency challenges</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>WebAssembly Expands Beyond the Browser</h2>
+          <p>
+            WebAssembly (Wasm) is enabling high-performance applications to run
+            in the browser. We're seeing its use expand to:
+          </p>
+          <ul>
+            <li>Video and image editing tools</li>
+            <li>CAD software</li>
+            <li>Scientific simulations</li>
+            <li>Game development</li>
+          </ul>
+
+          <h2>Accessibility as a Priority</h2>
+          <p>
+            Accessibility is becoming a core requirement rather than an
+            afterthought. New tools and frameworks are making it easier to build
+            inclusive web applications:
+          </p>
+          <ul>
+            <li>Automated accessibility testing in CI/CD pipelines</li>
+            <li>ARIA attributes and semantic HTML best practices</li>
+            <li>Screen reader compatibility testing</li>
+            <li>Color contrast and keyboard navigation enhancements</li>
+          </ul>
+
+          <div class="post-conclusion">
+            <h3>Conclusion</h3>
+            <p>
+              The web development industry in 2024 is characterized by smarter
+              tools, better performance, and more inclusive practices. Staying
+              updated with these trends isn't just about learning new
+              technologies—it's about building better, faster, and more
+              accessible web experiences for everyone.
+            </p>
+            <p>
+              The key to success in this rapidly changing field is adaptability
+              and continuous learning. Which of these trends are you most
+              excited about?
+            </p>
+          </div>
+
+          <!-- Social Sharing -->
+          <div class="social-sharing">
+            <h3>Share this article</h3>
+            <div class="share-buttons">
+              <a href="#" class="share-btn twitter">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a href="#" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="#" class="share-btn facebook">
+                <i class="fab fa-facebook"></i> Facebook
+              </a>
+              <a href="#" class="share-btn copy-link">
+                <i class="fas fa-link"></i> Copy Link
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Posts -->
+      <section class="related-posts">
+        <h2 class="related-title">Related Articles</h2>
+        <div class="related-grid">
+          <article class="related-card">
+            <img
+              src="../static/images/blog/responsive-design.jpg"
+              alt="Responsive design"
+            />
+            <div class="related-content">
+              <h3><a href="#">Mastering Responsive CSS Grid</a></h3>
+              <p>Learn advanced techniques for creating fluid layouts.</p>
+            </div>
+          </article>
+          <article class="related-card">
+            <img
+              src="../static/images/blog/javascript-es6.jpg"
+              alt="JavaScript"
+            />
+            <div class="related-content">
+              <h3><a href="#">Modern JavaScript Features</a></h3>
+              <p>Essential ES6+ features every developer should know.</p>
+            </div>
+          </article>
+          <article class="related-card">
+            <img
+              src="../static/images/blog/accessibility.jpg"
+              alt="Accessibility"
+            />
+            <div class="related-content">
+              <h3>
+                <a href="second-post.html">Building Accessible Web Apps</a>
+              </h3>
+              <p>Comprehensive guide to web accessibility.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3 class="footer-logo">
+            <i class="fas fa-pen-fancy"></i> CodeCanvas
+          </h3>
+          <p class="footer-description">
+            A blog dedicated to web development, design, and technology. We
+            share knowledge to help developers grow.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../kidcalc/index.html">kidCalc</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-copyright">
+            &copy; 2024 CodeCanvas Blog. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-menu").classList.toggle("active");
+        });
+
+      // Copy link functionality
+      document
+        .querySelector(".share-btn.copy-link")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const url = window.location.href;
+          navigator.clipboard.writeText(url).then(() => {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+              this.innerHTML = originalText;
+            }, 2000);
+          });
+        });
+    </script>
+  </body>
+</html>

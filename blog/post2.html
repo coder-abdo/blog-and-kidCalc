@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Accessible Web Applications | CodeCanvas Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/blog/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <i class="fas fa-pen-fancy"></i>
+          <span>CodeCanvas</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Articles</a></li>
+          <li><a href="#" class="nav-link">Tutorials</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+          <li>
+            <a href="../kidcalc/index.html" class="nav-link kidcalc-link"
+              >kidCalc</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="post-container">
+      <!-- Blog Post Header -->
+      <header class="post-header">
+        <div class="post-header-content">
+          <div class="post-category-badge">Best Practices</div>
+          <h1 class="post-title-main">Building Accessible Web Applications</h1>
+          <div class="post-meta-main">
+            <div class="author-info">
+              <img
+                src="../static/images/blog/author-jordan.jpg"
+                alt="Jordan Lee"
+                class="author-avatar"
+              />
+              <div>
+                <p class="author-name">Jordan Lee</p>
+                <p class="author-title">
+                  Accessibility Specialist at IncluTech
+                </p>
+              </div>
+            </div>
+            <div class="post-stats">
+              <span class="post-date-main"
+                ><i class="far fa-calendar"></i> February 28, 2024</span
+              >
+              <span class="read-time-main"
+                ><i class="far fa-clock"></i> 15 min read</span
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="post-featured-image">
+        <img
+          src="../static/images/blog/accessibility.jpg"
+          alt="Web accessibility illustration showing diverse users"
+        />
+      </div>
+
+      <!-- Post Content -->
+      <article class="post-content-main">
+        <!-- Author Bio Section -->
+        <section class="author-bio">
+          <h2>About the Author</h2>
+          <div class="author-bio-content">
+            <img
+              src="../static/images/blog/author-jordan.jpg"
+              alt="Jordan Lee"
+              class="author-bio-avatar"
+            />
+            <div>
+              <h3>Jordan Lee</h3>
+              <p class="author-title-bio">
+                Accessibility Specialist at IncluTech | WCAG Consultant
+              </p>
+              <p>
+                With 10 years of experience in digital accessibility, Jordan has
+                helped numerous organizations implement WCAG 2.1 standards.
+                She's a certified accessibility professional and frequent
+                speaker at international conferences on inclusive design.
+              </p>
+              <p>
+                Jordan holds a PhD in Human-Computer Interaction from MIT and
+                has published several research papers on assistive technologies.
+              </p>
+              <div class="author-social">
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="Personal Website"
+                  ><i class="fas fa-globe"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="article-content">
+          <p class="post-intro">
+            Web accessibility isn't just a legal requirement—it's a moral
+            imperative and a business necessity. In this comprehensive guide,
+            we'll explore practical strategies for building web applications
+            that everyone can use, regardless of ability.
+          </p>
+
+          <h2>Understanding Web Content Accessibility Guidelines (WCAG)</h2>
+          <p>
+            The WCAG 2.1 guidelines are organized around four principles, often
+            abbreviated as POUR:
+          </p>
+
+          <div class="accessibility-principles">
+            <div class="principle">
+              <div class="principle-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Perceivable</h3>
+              <p>Information must be presented in ways users can perceive.</p>
+            </div>
+            <div class="principle">
+              <div class="principle-icon">
+                <i class="fas fa-mouse-pointer"></i>
+              </div>
+              <h3>Operable</h3>
+              <p>Interface components must be operable by all users.</p>
+            </div>
+            <div class="principle">
+              <div class="principle-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>Understandable</h3>
+              <p>Information and operation must be understandable.</p>
+            </div>
+            <div class="principle">
+              <div class="principle-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Robust</h3>
+              <p>Content must be robust enough for various technologies.</p>
+            </div>
+          </div>
+
+          <h2>Semantic HTML: The Foundation of Accessibility</h2>
+          <p>
+            Using proper semantic HTML elements is the most important step in
+            creating accessible websites:
+          </p>
+
+          <div class="code-comparison">
+            <div class="code-bad">
+              <h4>❌ Avoid This:</h4>
+              <pre><code>&lt;div onclick="submitForm()"&gt;Submit&lt;/div&gt;</code></pre>
+            </div>
+            <div class="code-good">
+              <h4>✅ Do This Instead:</h4>
+              <pre><code>&lt;button onclick="submitForm()"&gt;Submit&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+
+          <h2>Keyboard Navigation</h2>
+          <p>Ensure all interactive elements are keyboard accessible:</p>
+          <ul>
+            <li>Maintain logical tab order</li>
+            <li>Provide visible focus indicators</li>
+            <li>Implement skip navigation links</li>
+            <li>Test with keyboard only (no mouse)</li>
+          </ul>
+
+          <h2>ARIA Attributes: When and How to Use Them</h2>
+          <p>
+            ARIA (Accessible Rich Internet Applications) attributes enhance
+            accessibility for custom widgets:
+          </p>
+
+          <pre><code class="html">&lt;!-- Navigation landmark --&gt;
+&lt;nav aria-label="Main navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Live region for dynamic content --&gt;
+&lt;div aria-live="polite" aria-atomic="true"&gt;
+  Items added to cart: &lt;span id="cart-count"&gt;0&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+          <div class="post-highlight warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>
+              <strong>Important:</strong> ARIA should complement semantic HTML,
+              not replace it. Use native HTML elements whenever possible.
+            </p>
+          </div>
+
+          <h2>Color Contrast and Visual Design</h2>
+          <p>Ensure sufficient contrast between text and background:</p>
+          <div class="contrast-examples">
+            <div class="contrast-good">
+              <h4>Good Contrast (AAA)</h4>
+              <p style="background: #1a56db; color: #ffffff; padding: 1rem">
+                This text has excellent contrast
+              </p>
+            </div>
+            <div class="contrast-bad">
+              <h4>Poor Contrast</h4>
+              <p style="background: #d1d5db; color: #f3f4f6; padding: 1rem">
+                Hard to read text
+              </p>
+            </div>
+          </div>
+
+          <h2>Testing Accessibility</h2>
+          <p>Regular testing is crucial. Use a combination of:</p>
+          <ul>
+            <li><strong>Automated tools:</strong> Axe, Lighthouse, WAVE</li>
+            <li>
+              <strong>Manual testing:</strong> Keyboard navigation, screen
+              readers
+            </li>
+            <li>
+              <strong>User testing:</strong> Include people with disabilities
+            </li>
+          </ul>
+
+          <h2>Common Accessibility Mistakes and Fixes</h2>
+          <div class="mistakes-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mistake</th>
+                  <th>Impact</th>
+                  <th>Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Missing alt text</td>
+                  <td>Screen readers can't describe images</td>
+                  <td>Add descriptive alt attributes</td>
+                </tr>
+                <tr>
+                  <td>Low color contrast</td>
+                  <td>Hard to read for visually impaired</td>
+                  <td>Use contrast ratio ≥ 4.5:1</td>
+                </tr>
+                <tr>
+                  <td>Missing form labels</td>
+                  <td>Screen readers can't identify inputs</td>
+                  <td>Use &lt;label&gt; elements</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Building an Accessibility-First Culture</h2>
+          <p>
+            Accessibility should be integrated throughout the development
+            process:
+          </p>
+          <ol>
+            <li>
+              <strong>Planning:</strong> Include accessibility requirements in
+              user stories
+            </li>
+            <li><strong>Design:</strong> Create accessible design systems</li>
+            <li>
+              <strong>Development:</strong> Follow accessibility coding
+              standards
+            </li>
+            <li>
+              <strong>Testing:</strong> Include accessibility in QA processes
+            </li>
+            <li><strong>Maintenance:</strong> Regular accessibility audits</li>
+          </ol>
+
+          <div class="post-conclusion">
+            <h3>Conclusion</h3>
+            <p>
+              Building accessible web applications isn't just about
+              compliance—it's about creating inclusive experiences that work for
+              everyone. By implementing these practices, you're not only
+              avoiding legal issues but also expanding your audience and
+              creating better products.
+            </p>
+            <p>
+              Remember: accessibility benefits all users, not just those with
+              disabilities. Clear navigation, readable text, and predictable
+              interactions improve the experience for everyone.
+            </p>
+          </div>
+
+          <!-- Resources -->
+          <div class="resources-section">
+            <h3>Additional Resources</h3>
+            <ul>
+              <li>
+                <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+                  >Official WCAG Guidelines</a
+                >
+              </li>
+              <li>
+                <a href="https://webaim.org/resources/"
+                  >WebAIM Accessibility Resources</a
+                >
+              </li>
+              <li><a href="https://a11yproject.com/">The A11Y Project</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Sharing -->
+          <div class="social-sharing">
+            <h3>Share this article</h3>
+            <div class="share-buttons">
+              <a href="#" class="share-btn twitter">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a href="#" class="share-btn linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="#" class="share-btn facebook">
+                <i class="fab fa-facebook"></i> Facebook
+              </a>
+              <a href="#" class="share-btn copy-link">
+                <i class="fas fa-link"></i> Copy Link
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Posts -->
+      <section class="related-posts">
+        <h2 class="related-title">Related Articles</h2>
+        <div class="related-grid">
+          <article class="related-card">
+            <img
+              src="../static/images/blog/web-dev-trends.jpg"
+              alt="Web trends"
+            />
+            <div class="related-content">
+              <h3><a href="first-post.html">Web Development Trends 2024</a></h3>
+              <p>Latest trends shaping web development.</p>
+            </div>
+          </article>
+          <article class="related-card">
+            <img
+              src="../static/images/blog/responsive-design.jpg"
+              alt="Responsive design"
+            />
+            <div class="related-content">
+              <h3><a href="#">Responsive CSS Grid Techniques</a></h3>
+              <p>Master fluid layouts with CSS Grid.</p>
+            </div>
+          </article>
+          <article class="related-card">
+            <img
+              src="../static/images/blog/javascript-es6.jpg"
+              alt="JavaScript"
+            />
+            <div class="related-content">
+              <h3><a href="#">Modern JavaScript Guide</a></h3>
+              <p>Essential ES6+ features for developers.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3 class="footer-logo">
+            <i class="fas fa-pen-fancy"></i> CodeCanvas
+          </h3>
+          <p class="footer-description">
+            A blog dedicated to web development, design, and technology. We
+            share knowledge to help developers grow.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../kidcalc/index.html">kidCalc</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-copyright">
+            &copy; 2024 CodeCanvas Blog. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-menu").classList.toggle("active");
+        });
+
+      // Copy link functionality
+      document
+        .querySelector(".share-btn.copy-link")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const url = window.location.href;
+          navigator.clipboard.writeText(url).then(() => {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+              this.innerHTML = originalText;
+            }, 2000);
+          });
+        });
+    </script>
+  </body>
+</html>

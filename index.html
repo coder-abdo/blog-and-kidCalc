@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeCanvas Blog | Where Tech Meets Creativity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/blog/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo">
+          <i class="fas fa-pen-fancy"></i>
+          <span>CodeCanvas</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link active">Home</a></li>
+          <li><a href="#" class="nav-link">Articles</a></li>
+          <li><a href="#" class="nav-link">Tutorials</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+          <li>
+            <a href="../kidcalc/index.html" class="nav-link kidcalc-link"
+              >kidCalc</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <header class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Welcome to CodeCanvas</h1>
+          <p class="hero-subtitle">
+            Where technology meets creativity. Explore tutorials, insights, and
+            stories from the world of web development.
+          </p>
+          <a href="#featured-posts" class="hero-cta">Explore Articles</a>
+        </div>
+      </header>
+
+      <!-- Featured Posts Section -->
+      <section class="featured-posts" id="featured-posts">
+        <h2 class="section-title">Featured Articles</h2>
+        <p class="section-subtitle">Latest insights from our developers</p>
+
+        <div class="posts-grid">
+          <!-- First Blog Post Card -->
+          <article class="post-card">
+            <div class="post-image">
+              <img
+                src="static/images/blog/web-dev-trends.jpg"
+                alt="Web development trends illustration"
+              />
+              <div class="post-category">Trends</div>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">
+                <a href="blog/post1.html">Web Development Trends in 2024</a>
+              </h3>
+              <div class="post-meta">
+                <span class="post-date"
+                  ><i class="far fa-calendar"></i> March 15, 2024</span
+                >
+                <span class="post-author"
+                  ><i class="far fa-user"></i> Alex Johnson</span
+                >
+              </div>
+              <p class="post-summary">
+                Explore the latest trends shaping the future of web development,
+                from AI integration to advanced CSS techniques and performance
+                optimization strategies.
+              </p>
+              <div class="post-footer">
+                <a href="blog/post1.html" class="read-more"
+                  >Read Full Article <i class="fas fa-arrow-right"></i
+                ></a>
+                <span class="read-time">8 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Second Blog Post Card -->
+          <article class="post-card">
+            <div class="post-image">
+              <img
+                src="static/images/blog/responsive-design.jpg"
+                alt="Responsive design illustration"
+              />
+              <div class="post-category">Design</div>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">
+                <a href="#">Mastering Responsive CSS Grid</a>
+              </h3>
+              <div class="post-meta">
+                <span class="post-date"
+                  ><i class="far fa-calendar"></i> March 10, 2024</span
+                >
+                <span class="post-author"
+                  ><i class="far fa-user"></i> Sam Rivera</span
+                >
+              </div>
+              <p class="post-summary">
+                Learn how to create fluid, responsive layouts using CSS Grid. We
+                break down complex layouts into simple, maintainable code
+                patterns.
+              </p>
+              <div class="post-footer">
+                <a href="#" class="read-more"
+                  >Read Full Article <i class="fas fa-arrow-right"></i
+                ></a>
+                <span class="read-time">12 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Third Blog Post Card (Extra for better layout) -->
+          <article class="post-card">
+            <div class="post-image">
+              <img
+                src="static/images/blog/javascript-es6.jpg"
+                alt="JavaScript ES6+ features illustration"
+              />
+              <div class="post-category">JavaScript</div>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">
+                <a href="#">Modern JavaScript: ES6+ Features You Should Know</a>
+              </h3>
+              <div class="post-meta">
+                <span class="post-date"
+                  ><i class="far fa-calendar"></i> March 5, 2024</span
+                >
+                <span class="post-author"
+                  ><i class="far fa-user"></i> Taylor Chen</span
+                >
+              </div>
+              <p class="post-summary">
+                Dive into the most useful ES6+ features that will make your
+                JavaScript code cleaner, more efficient, and easier to maintain.
+              </p>
+              <div class="post-footer">
+                <a href="#" class="read-more"
+                  >Read Full Article <i class="fas fa-arrow-right"></i
+                ></a>
+                <span class="read-time">10 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fourth Blog Post Card -->
+          <article class="post-card">
+            <div class="post-image">
+              <img
+                src="static/images/blog/accessibility.jpg"
+                alt="Web accessibility illustration"
+              />
+              <div class="post-category">Best Practices</div>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">
+                <a href="blog/post2.html"
+                  >Building Accessible Web Applications</a
+                >
+              </h3>
+              <div class="post-meta">
+                <span class="post-date"
+                  ><i class="far fa-calendar"></i> February 28, 2024</span
+                >
+                <span class="post-author"
+                  ><i class="far fa-user"></i> Jordan Lee</span
+                >
+              </div>
+              <p class="post-summary">
+                A comprehensive guide to implementing accessibility features
+                that make your web applications usable by everyone, regardless
+                of ability.
+              </p>
+              <div class="post-footer">
+                <a href="blog/post2.html" class="read-more"
+                  >Read Full Article <i class="fas fa-arrow-right"></i
+                ></a>
+                <span class="read-time">15 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <div class="newsletter-container">
+          <h2 class="newsletter-title">Stay Updated</h2>
+          <p class="newsletter-text">
+            Subscribe to our newsletter and never miss a new article or
+            tutorial.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Your email address"
+              required
+              class="newsletter-input"
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3 class="footer-logo">
+            <i class="fas fa-pen-fancy"></i> CodeCanvas
+          </h3>
+          <p class="footer-description">
+            A blog dedicated to web development, design, and technology. We
+            share knowledge to help developers grow.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../kidcalc/index.html">kidCalc</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-copyright">
+            &copy; 2024 CodeCanvas Blog. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-menu").classList.toggle("active");
+        });
+      <!-- In index.html, add this script before closing body tag to handle missing images -->
+      // Handle missing images
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        const placeholderColors = ["#2563eb", "#7c3aed", "#f59e0b", "#10b981"];
+
+        images.forEach((img) => {
+          img.onerror = function () {
+            // Create a colored placeholder with text
+            const canvas = document.createElement("canvas");
+            canvas.width = 400;
+            canvas.height = 200;
+            const ctx = canvas.getContext("2d");
+
+            // Random color from our palette
+            const color =
+              placeholderColors[
+                Math.floor(Math.random() * placeholderColors.length)
+              ];
+
+            // Draw background
+            ctx.fillStyle = color + "20"; // Add transparency
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw text
+            ctx.fillStyle = color;
+            ctx.font = "bold 20px Arial";
+            ctx.textAlign = "center";
+            ctx.fillText("Blog Image", canvas.width / 2, canvas.height / 2);
+
+            // Replace broken image with canvas
+            img.src = canvas.toDataURL();
+            img.alt = "Placeholder image";
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

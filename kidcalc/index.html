@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kidCalc - Fun Math Learning for Kids</title>
+    <link rel="stylesheet" href="../static/css/kidcalc/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="theme-ocean">
+    <div class="kidcalc-container">
+      <!-- Information Bar -->
+      <div class="info-bar">
+        <div class="info-content">
+          <div class="welcome-message">
+            <i class="fas fa-star"></i>
+            <span id="welcome-text"
+              >Welcome to kidCalc! Let's learn math with fun!</span
+            >
+          </div>
+          <div class="user-info">
+            <i class="fas fa-user"></i>
+            <span id="user-name">Guest</span>
+            <button id="logout-btn" class="logout-btn">
+              <i class="fas fa-sign-out-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <main class="main-content">
+        <!-- Login Form Section -->
+        <section class="login-section" id="login-section">
+          <div class="login-container">
+            <div class="login-header">
+              <h1><i class="fas fa-calculator"></i> kidCalc</h1>
+              <p class="subtitle">Fun Math Learning for Kids</p>
+            </div>
+
+            <div class="login-form-container">
+              <h2>Welcome!</h2>
+              <p class="login-instructions">
+                Enter your name to start learning math with fun themes!
+              </p>
+
+              <form id="login-form" class="login-form">
+                <div class="form-group">
+                  <label for="username">
+                    <i class="fas fa-user"></i> Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="age">
+                    <i class="fas fa-birthday-cake"></i> Your Age
+                  </label>
+                  <select id="age" required>
+                    <option value="">Select your age</option>
+                    <option value="5">5 years</option>
+                    <option value="6">6 years</option>
+                    <option value="7">7 years</option>
+                    <option value="8">8 years</option>
+                    <option value="9">9 years</option>
+                    <option value="10">10 years</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Choose Your Theme:</label>
+                  <div class="theme-selector">
+                    <div class="theme-option" data-theme="ocean">
+                      <div class="theme-preview ocean"></div>
+                      <span>Ocean Adventure</span>
+                    </div>
+                    <div class="theme-option" data-theme="space">
+                      <div class="theme-preview space"></div>
+                      <span>Space Explorer</span>
+                    </div>
+                    <div class="theme-option" data-theme="jungle">
+                      <div class="theme-preview jungle"></div>
+                      <span>Jungle Safari</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="login-btn">
+                  <i class="fas fa-rocket"></i> Start Learning!
+                </button>
+              </form>
+
+              <div class="features">
+                <h3>What you'll learn:</h3>
+                <div class="feature-grid">
+                  <div class="feature">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Addition</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-minus-circle"></i>
+                    <span>Subtraction</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Multiplication</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-divide"></i>
+                    <span>Division</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KidCalc Interface (Hidden by default) -->
+        <section
+          class="calculator-section"
+          id="calculator-section"
+          style="display: none"
+        >
+          <div class="calculator-header">
+            <h1><i class="fas fa-calculator"></i> kidCalc Math Adventure</h1>
+            <p class="subtitle" id="user-greeting">
+              Hello, Guest! Let's solve some math problems!
+            </p>
+          </div>
+
+          <div class="calculator-container">
+            <!-- Theme Selector -->
+            <div class="theme-controls">
+              <h3>
+                <i class="fas fa-palette"></i> Choose Your Adventure Theme:
+              </h3>
+              <div class="theme-buttons">
+                <button class="theme-btn active" data-theme="ocean">
+                  <i class="fas fa-fish"></i> Ocean
+                </button>
+                <button class="theme-btn" data-theme="space">
+                  <i class="fas fa-rocket"></i> Space
+                </button>
+                <button class="theme-btn" data-theme="jungle">
+                  <i class="fas fa-tree"></i> Jungle
+                </button>
+              </div>
+            </div>
+
+            <!-- Math Problem Display -->
+            <div class="problem-section">
+              <div class="problem-display">
+                <div class="problem-container">
+                  <div class="problem-numbers">
+                    <span id="num1">5</span>
+                    <span id="operator">+</span>
+                    <span id="num2">3</span>
+                    <span>=</span>
+                  </div>
+                  <div class="problem-result">
+                    <input
+                      type="text"
+                      id="answer-input"
+                      placeholder="?"
+                      maxlength="3"
+                    />
+                  </div>
+                </div>
+                <div class="problem-feedback" id="feedback">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>Enter your answer and press Enter or click =</span>
+                </div>
+              </div>
+
+              <div class="score-board">
+                <div class="score-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Correct: <span id="correct-score">0</span></span>
+                </div>
+                <div class="score-item">
+                  <i class="fas fa-times-circle"></i>
+                  <span>Wrong: <span id="wrong-score">0</span></span>
+                </div>
+                <div class="score-item">
+                  <i class="fas fa-star"></i>
+                  <span>Streak: <span id="streak">0</span></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Calculator Interface -->
+            <div class="calculator">
+              <!-- Display -->
+              <div class="calculator-display">
+                <div class="display-content">
+                  <div class="display-history" id="history"></div>
+                  <div class="display-current" id="display">0</div>
+                </div>
+                <button class="clear-btn" id="clear-btn">
+                  <i class="fas fa-broom"></i> Clear
+                </button>
+              </div>
+
+              <!-- Calculator Buttons -->
+              <div class="calculator-buttons">
+                <!-- Row 1 -->
+                <button class="calc-btn number" data-value="7">7</button>
+                <button class="calc-btn number" data-value="8">8</button>
+                <button class="calc-btn number" data-value="9">9</button>
+                <button class="calc-btn operation" data-operation="divide">
+                  <i class="fas fa-divide"></i>
+                </button>
+
+                <!-- Row 2 -->
+                <button class="calc-btn number" data-value="4">4</button>
+                <button class="calc-btn number" data-value="5">5</button>
+                <button class="calc-btn number" data-value="6">6</button>
+                <button class="calc-btn operation" data-operation="multiply">
+                  <i class="fas fa-times"></i>
+                </button>
+
+                <!-- Row 3 -->
+                <button class="calc-btn number" data-value="1">1</button>
+                <button class="calc-btn number" data-value="2">2</button>
+                <button class="calc-btn number" data-value="3">3</button>
+                <button class="calc-btn operation" data-operation="subtract">
+                  <i class="fas fa-minus"></i>
+                </button>
+
+                <!-- Row 4 -->
+                <button class="calc-btn number" data-value="0">0</button>
+                <button class="calc-btn decimal" data-value=".">.</button>
+                <button class="calc-btn equals" id="equals-btn">
+                  <i class="fas fa-equals"></i>
+                </button>
+                <button class="calc-btn operation" data-operation="add">
+                  <i class="fas fa-plus"></i>
+                </button>
+
+                <!-- Row 5: Special Buttons -->
+                <button class="calc-btn special" id="backspace-btn">
+                  <i class="fas fa-backspace"></i>
+                </button>
+                <button class="calc-btn special" id="new-problem-btn">
+                  <i class="fas fa-random"></i> New Problem
+                </button>
+                <button class="calc-btn special" id="hint-btn">
+                  <i class="fas fa-lightbulb"></i> Hint
+                </button>
+                <button class="calc-btn special" id="sound-toggle">
+                  <i class="fas fa-volume-up"></i> Sound
+                </button>
+              </div>
+            </div>
+
+            <!-- Learning Tips -->
+            <div class="learning-tips">
+              <h3><i class="fas fa-graduation-cap"></i> Learning Tips</h3>
+              <div class="tips-container">
+                <div class="tip">
+                  <i class="fas fa-plus"></i>
+                  <p>
+                    <strong>Addition:</strong> Counting forward. 5 + 3 means
+                    start at 5, count 3 more.
+                  </p>
+                </div>
+                <div class="tip">
+                  <i class="fas fa-minus"></i>
+                  <p>
+                    <strong>Subtraction:</strong> Counting backward. 8 - 2 means
+                    start at 8, count back 2.
+                  </p>
+                </div>
+                <div class="tip">
+                  <i class="fas fa-times"></i>
+                  <p>
+                    <strong>Multiplication:</strong> Repeated addition. 3 × 4
+                    means 3 groups of 4.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adventure Zone -->
+          <div class="adventure-zone">
+            <h3><i class="fas fa-map"></i> Adventure Zone</h3>
+            <div class="adventure-container">
+              <div class="adventure-item" id="ocean-adventure">
+                <div class="adventure-icon">
+                  <i class="fas fa-fish"></i>
+                </div>
+                <p>
+                  Collect <span class="adventure-count">0</span> sea creatures
+                </p>
+              </div>
+              <div class="adventure-item" id="space-adventure">
+                <div class="adventure-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <p>Visit <span class="adventure-count">0</span> planets</p>
+              </div>
+              <div class="adventure-item" id="jungle-adventure">
+                <div class="adventure-icon">
+                  <i class="fas fa-tree"></i>
+                </div>
+                <p>
+                  Find <span class="adventure-count">0</span> jungle animals
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="kidcalc-footer">
+        <div class="footer-content">
+          <p>
+            <i class="fas fa-heart"></i> Made with love for kids learning math |
+            <a href="../index.html">Back to Blog</a>
+          </p>
+          <p class="footer-note">
+            kidCalc helps children learn math through fun, interactive
+            adventures!
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Audio Elements for Sound Effects -->
+    <audio
+      id="correct-sound"
+      src="../static/audio/correct.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="wrong-sound"
+      src="../static/audio/wrong.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="click-sound"
+      src="../static/audio/click.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="../static/js/kidcalc.js"></script>
+  </body>
+</html>
